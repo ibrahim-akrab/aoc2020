@@ -8,9 +8,8 @@ pub fn day3b() -> String {
     let slopes: [(usize, usize); 5] = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)];
     slopes
         .iter()
-        .fold(1usize, |total, (n_right, n_down)| {
-            total * track_path(&forest, *n_right, *n_down)
-        })
+        .map(|(n_right, n_down)| track_path(&forest, *n_right, *n_down))
+        .product::<usize>()
         .to_string()
 }
 
