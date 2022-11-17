@@ -1,5 +1,4 @@
 use regex::Regex;
-use std::fs;
 
 pub fn day2a() -> String {
     let values = read_data();
@@ -79,6 +78,7 @@ impl PasswordPolicy {
 }
 
 fn read_data() -> Vec<PasswordPolicy> {
+    use std::fs;
     let values = fs::read_to_string("inputs/day2.txt").expect("Couldn't read file");
     const REGEX: &str = r"^(\d+)-(\d+) (.): (.*)$";
     let regex = Regex::new(REGEX).unwrap();

@@ -1,5 +1,4 @@
 use itertools::Itertools;
-use std::fs;
 
 pub fn day1a() -> String {
     find_expense(2)
@@ -23,6 +22,7 @@ fn find_expense(n: usize) -> String {
 }
 
 fn read_data() -> Vec<usize> {
+    use std::fs;
     let values = fs::read_to_string("inputs/day1.txt").expect("Couldn't read file");
     values
         .split('\n')
