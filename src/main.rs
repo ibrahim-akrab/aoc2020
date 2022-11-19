@@ -1,13 +1,14 @@
 use aoc2020::{
-    day1::{day1a, day1b},
-    day2::{day2a, day2b},
-    day3::{day3a, day3b},
-    day4::{day4a, day4b},
-    day5::{day5a, day5b},
-    day6::{day6a, day6b},
-    day7::{day7a, day7b},
-    day8::{day8a, day8b},
-    day9::{day9a, day9b},
+    day01::{day1a, day1b},
+    day02::{day2a, day2b},
+    day03::{day3a, day3b},
+    day04::{day4a, day4b},
+    day05::{day5a, day5b},
+    day06::{day6a, day6b},
+    day07::{day7a, day7b},
+    day08::{day8a, day8b},
+    day09::{day9a, day9b},
+    day10::{day10a, day10b},
 };
 
 fn main() {
@@ -33,7 +34,9 @@ fn main() {
         "day8b" => day8b(),
         "day9a" => day9a(),
         "day9b" => day9b(),
-        _ => day9b(),
+        "day10a" => day10a(),
+        "day10b" => day10b(),
+        _ => day10a(),
         // _ => "Not yet solved".to_string(),
     };
     println!("{result}");
