@@ -31,7 +31,7 @@ fn read_data() -> HashMap<String, Bag> {
     use std::fs;
     let factory = BagFactory::default();
     let mut set = HashMap::new();
-    fs::read_to_string("inputs/day7.txt")
+    fs::read_to_string("inputs/day07.txt")
         .expect("Couldn't read file")
         .split('\n')
         .filter_map(|s| factory.creata_bag(s))

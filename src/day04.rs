@@ -145,7 +145,7 @@ impl Passport {
 
 fn read_data(strict: bool) -> Vec<Passport> {
     use std::fs;
-    let values = fs::read_to_string("inputs/day4.txt").expect("Couldn't read file");
+    let values = fs::read_to_string("inputs/day04.txt").expect("Couldn't read file");
     values
         .split("\n\n")
         .map(|s| Passport::new(s, strict))

@@ -15,7 +15,7 @@ pub fn day3b() -> String {
 
 fn read_data() -> Vec<String> {
     use std::fs;
-    let values = fs::read_to_string("inputs/day3.txt").expect("Couldn't read file");
+    let values = fs::read_to_string("inputs/day03.txt").expect("Couldn't read file");
     values
         .split('\n')
         .filter(|&s| !s.is_empty())

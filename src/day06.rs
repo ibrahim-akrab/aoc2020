@@ -45,7 +45,7 @@ fn count_set_bits(mut bitmap: u32) -> u32 {
 
 fn read_data() -> Vec<String> {
     use std::fs;
-    fs::read_to_string("inputs/day6.txt")
+    fs::read_to_string("inputs/day06.txt")
         .expect("Couldn't read file")
         .split("\n\n")
         .map(String::from)

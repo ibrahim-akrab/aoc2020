@@ -79,7 +79,7 @@ impl PasswordPolicy {
 
 fn read_data() -> Vec<PasswordPolicy> {
     use std::fs;
-    let values = fs::read_to_string("inputs/day2.txt").expect("Couldn't read file");
+    let values = fs::read_to_string("inputs/day02.txt").expect("Couldn't read file");
     const REGEX: &str = r"^(\d+)-(\d+) (.): (.*)$";
     let regex = Regex::new(REGEX).unwrap();
     values

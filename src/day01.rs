@@ -23,7 +23,7 @@ fn find_expense(n: usize) -> String {
 
 fn read_data() -> Vec<usize> {
     use std::fs;
-    let values = fs::read_to_string("inputs/day1.txt").expect("Couldn't read file");
+    let values = fs::read_to_string("inputs/day01.txt").expect("Couldn't read file");
     values
         .split('\n')
         .filter_map(|s| s.parse::<usize>().ok())

@@ -51,7 +51,7 @@ fn find_xmas_weakness(numbers: &[u64], invalid_number: u64) -> u64 {
 
 fn read_data() -> Vec<u64> {
     use std::fs;
-    fs::read_to_string("inputs/day9.txt")
+    fs::read_to_string("inputs/day09.txt")
         .expect("Couldn't read file")
         .lines()
         .filter_map(|x| x.parse().ok())

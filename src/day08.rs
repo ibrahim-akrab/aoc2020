@@ -91,7 +91,7 @@ fn repair_boot(instructions: &Vec<Instruction>, flipped_instruction: usize) -> O
 
 fn read_data() -> Vec<Instruction> {
     use std::fs;
-    fs::read_to_string("inputs/day8.txt")
+    fs::read_to_string("inputs/day08.txt")
         .expect("Couldn't read file")
         .lines()
         .filter_map(Instruction::create)

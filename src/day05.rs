@@ -30,7 +30,7 @@ pub fn day5b() -> String {
 
 fn read_data() -> Vec<String> {
     use std::fs;
-    fs::read_to_string("inputs/day5.txt")
+    fs::read_to_string("inputs/day05.txt")
         .expect("Couldn't read file")
         .split('\n')
         .filter(|&s| s.len() == 10)
