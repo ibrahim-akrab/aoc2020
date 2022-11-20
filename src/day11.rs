@@ -195,7 +195,6 @@ fn read_data() -> Layout {
         std::fs::read_to_string("inputs/day11.txt")
             .expect("Couldn't read file")
             .lines()
-            .filter(|s| !s.is_empty())
             .map(|s| s.chars().map(Seat::new).collect())
             .collect::<Vec<Vec<Seat>>>(),
     )
