@@ -68,6 +68,7 @@ struct Layout {
 }
 impl Display for Layout {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        #![allow(unused_must_use)]
         self.seats.iter().for_each(|row| {
             row.iter().for_each(|seat| {
                 f.write_fmt(format_args!("{}", seat));
