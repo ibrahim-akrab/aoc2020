@@ -172,16 +172,11 @@ impl Ship {
             } else {
                 unreachable!()
             };
-        let new_dir_idx;
-        match command.dir {
-            Direction::Right => {
-                new_dir_idx = (current_dir_idx + (command.val as usize / 90)) % 4;
-            }
-            Direction::Left => {
-                new_dir_idx = (current_dir_idx + (3 * command.val as usize / 90)) % 4;
-            }
+        let new_dir_idx: usize = match command.dir {
+            Direction::Right => (current_dir_idx + (command.val as usize / 90)) % 4,
+            Direction::Left => (current_dir_idx + (3 * command.val as usize / 90)) % 4,
             _ => unreachable!(),
-        }
+        };
 
         self.facing = DIRECTIONS[new_dir_idx];
     }
