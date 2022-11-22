@@ -14,7 +14,6 @@ pub fn day15b() -> String {
 
 fn read_data() -> Vec<usize> {
     std::fs::read_to_string("inputs/day15.txt")
-        // std::fs::read_to_string("test.txt")
         .expect("Couldn't read file")
         .trim()
         .split(',')
@@ -40,18 +39,13 @@ impl Default for Elves {
 
 impl Elves {
     fn play(&mut self, numbers: Vec<usize>, nth: usize) -> usize {
-        // println!("numbers: {numbers:#?}");
         numbers.iter().for_each(|&number| {
             self.mem.insert(number, (self.turn, 0));
             self.last_number = number;
             self.turn += 1;
         });
-        // while self.turn < 12 {
         while self.turn < nth {
-            // println!("turn: {}", self.turn);
-            // println!("{:#?}", self.mem);
             self.take_turns();
-            // println!("number spoken:{}", self.last_number);
         }
         self.take_turns();
         self.last_number
