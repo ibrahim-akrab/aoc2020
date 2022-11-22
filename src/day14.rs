@@ -102,8 +102,7 @@ impl Vm {
             }
             Instruction::Mem(add, val) => {
                 let floating_pos = (0..self.mask_floating.count_ones() as usize + 1)
-                    .map(|k| BitIndexIter::new(self.mask_floating).combinations(k))
-                    .flatten()
+                    .flat_map(|k| BitIndexIter::new(self.mask_floating).combinations(k))
                     .collect::<Vec<Vec<usize>>>();
 
                 let base_address = (add | self.mask_ones) & !self.mask_floating;
