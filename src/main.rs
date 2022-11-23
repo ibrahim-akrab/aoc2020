@@ -14,6 +14,7 @@ use aoc2020::{
     day13::{day13a, day13b},
     day14::{day14a, day14b},
     day15::{day15a, day15b},
+    day16::{day16a, day16b},
 };
 
 fn main() {
@@ -51,7 +52,9 @@ fn main() {
         "day14b" => day14b(),
         "day15a" => day15a(),
         "day15b" => day15b(),
-        _ => day15b(),
+        "day16a" => day16a(),
+        "day16b" => day16b(),
+        _ => day16b(),
         // _ => "Not yet solved".to_string(),
     };
     println!("{result}");
